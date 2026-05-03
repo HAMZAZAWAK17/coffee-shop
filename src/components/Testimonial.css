@@ -1,0 +1,121 @@
+/* ===== Testimonial ===== */
+.testimonial {
+  position: relative;
+  padding: var(--section-py) 0;
+  overflow: hidden;
+}
+
+.testimonial__bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 50% 50%, rgba(201, 148, 42, 0.07) 0%, transparent 65%),
+    var(--color-espresso);
+  z-index: 0;
+}
+
+.testimonial > .container,
+.testimonial > .ornament-divider {
+  position: relative;
+  z-index: 1;
+}
+
+.testimonial__inner {
+  max-width: 780px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Stars */
+.testimonial__stars {
+  display: flex;
+  gap: 0.35rem;
+}
+
+.testimonial__star {
+  width: 22px;
+  height: 22px;
+  color: var(--color-gold);
+  fill: var(--color-gold);
+}
+
+/* Quote */
+.testimonial__quote {
+  border: none;
+}
+
+.testimonial__quote p {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(1.4rem, 3vw, 2.1rem);
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--color-cream);
+  position: relative;
+}
+
+.testimonial__quote p::before {
+  content: '\201C';
+  font-size: 5rem;
+  color: var(--color-gold);
+  opacity: 0.25;
+  position: absolute;
+  top: -1.5rem;
+  left: -1.5rem;
+  font-family: var(--font-serif);
+  line-height: 1;
+}
+
+/* Attribution */
+.testimonial__attribution {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  justify-content: center;
+}
+
+.testimonial__line {
+  flex: 1;
+  height: 1px;
+  background: rgba(201, 148, 42, 0.25);
+  max-width: 120px;
+}
+
+.testimonial__author {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.testimonial__name {
+  font-family: var(--font-label);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-gold-light);
+}
+
+.testimonial__place {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.85rem;
+  color: var(--color-cream-dim);
+  opacity: 0.65;
+}
+
+@media (max-width: 600px) {
+  .testimonial__quote p {
+    font-size: 1.25rem;
+  }
+  .testimonial__quote p::before {
+    font-size: 3.5rem;
+    left: -0.5rem;
+    top: -1rem;
+  }
+}

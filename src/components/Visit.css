@@ -1,0 +1,251 @@
+/* ===== Visit Section ===== */
+.visit {
+  position: relative;
+  padding: var(--section-py) 0;
+  overflow: hidden;
+}
+
+.visit__bg {
+  position: absolute;
+  inset: 0;
+  background: var(--color-mocha);
+  z-index: 0;
+}
+
+.visit > .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Header */
+.visit__header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.visit__header .section-label {
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.visit__title {
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+}
+
+/* Grid */
+.visit__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  margin-bottom: 2px;
+}
+
+/* Cards */
+.visit__card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(201, 148, 42, 0.12);
+  padding: 2.5rem 2.5rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  transition: border-color var(--transition), background var(--transition);
+}
+
+.visit__card:hover {
+  background: rgba(201, 148, 42, 0.03);
+  border-color: rgba(201, 148, 42, 0.25);
+}
+
+.visit__card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.visit__card-icon {
+  color: var(--color-gold);
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.visit__card-title {
+  font-family: var(--font-label);
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+
+/* Hours */
+.visit__hours {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.visit__hours-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.visit__hours-day {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  color: var(--color-cream);
+  white-space: nowrap;
+}
+
+.visit__hours-dots {
+  flex: 1;
+  border-bottom: 1px dotted rgba(201, 148, 42, 0.25);
+  min-width: 12px;
+}
+
+.visit__hours-time {
+  font-family: var(--font-label);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  color: var(--color-gold);
+  white-space: nowrap;
+}
+
+.visit__hours-note {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.82rem;
+  color: var(--color-cream-dim);
+  opacity: 0.55;
+  line-height: 1.65;
+  border-top: 1px solid rgba(201, 148, 42, 0.1);
+  padding-top: 1rem;
+}
+
+/* Info List */
+.visit__info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.visit__info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.visit__info-label {
+  font-family: var(--font-label);
+  font-size: 0.6rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--color-gold-dim);
+}
+
+.visit__info-value {
+  font-family: var(--font-serif);
+  font-size: 0.97rem;
+  color: var(--color-cream);
+  line-height: 1.5;
+}
+
+.visit__info-link {
+  transition: color var(--transition);
+}
+
+.visit__info-link:hover {
+  color: var(--color-gold-light);
+}
+
+.visit__cta {
+  align-self: flex-start;
+  margin-top: 0.5rem;
+}
+
+/* Map */
+.visit__map {
+  position: relative;
+  height: 320px;
+  overflow: hidden;
+  border: 1px solid rgba(201, 148, 42, 0.12);
+  border-top: none;
+}
+
+.visit__map-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: sepia(0.4) saturate(0.6) brightness(0.5);
+  transition: filter 0.6s var(--ease), transform 0.6s var(--ease);
+}
+
+.visit__map:hover .visit__map-img {
+  filter: sepia(0.2) saturate(0.8) brightness(0.6);
+  transform: scale(1.02);
+}
+
+.visit__map-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  pointer-events: none;
+}
+
+.visit__map-pin {
+  color: var(--color-gold);
+  width: 36px;
+  height: 36px;
+  animation: mapPulse 2.5s ease-in-out infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.visit__map-pin svg {
+  width: 36px;
+  height: 36px;
+  fill: var(--color-gold);
+  drop-shadow: 0 0 12px rgba(201, 148, 42, 0.8);
+  filter: drop-shadow(0 2px 12px rgba(201, 148, 42, 0.7));
+}
+
+@keyframes mapPulse {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-6px); }
+}
+
+.visit__map-label {
+  font-family: var(--font-label);
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--color-cream);
+  text-shadow: 0 2px 12px rgba(0,0,0,0.8);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .visit__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .visit__map {
+    height: 240px;
+  }
+}
+
+@media (max-width: 480px) {
+  .visit__card {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .visit__hours-day {
+    font-size: 0.9rem;
+  }
+}
