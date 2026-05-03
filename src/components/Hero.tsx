@@ -2,57 +2,34 @@ import './Hero.css'
 
 export default function Hero() {
   return (
-    <section className="hero" id="hero" aria-label="Hero">
+    <section className="hero angle-bottom" id="home">
       {/* Background image */}
       <div className="hero__bg">
         <img
-          src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1920&q=80"
-          alt="Moroccan café interior"
+          src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1920&q=80"
+          alt="Barista pouring milk into coffee"
           className="hero__bg-img"
-          loading="eager"
         />
         <div className="hero__overlay" />
-        {/* Decorative mesh */}
-        <div className="hero__zellige" aria-hidden="true" />
       </div>
 
-      {/* Content */}
       <div className="hero__content container">
-        <div className="hero__city section-label">
-          <span>Casablanca, Morocco</span>
-        </div>
-
-        <h1 className="hero__title section-heading">
-          Where Coffee<br />
-          <em>Meets the Soul</em>
+        <h1 className="hero__title">
+          Brewed to Perfection,
         </h1>
-
-        <p className="hero__subtitle">
-          A sanctuary of warmth, craft, and ancient flavours —<br />
-          brewed with the spirit of a Moroccan riad.
+        <p className="hero__subtitle-text">
+          RICH FLAVORS & DAILY CRAFT
         </p>
 
-        <div className="hero__cta-row">
-          <a href="#menu" className="btn-gold" id="hero-explore-btn">
-            <span>Explore Our Menu</span>
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </a>
-          <a href="#story" className="btn-outline" id="hero-story-btn">
-            <span>Our Story</span>
-          </a>
-        </div>
-
-        {/* Scroll indicator */}
-        <div className="hero__scroll" aria-hidden="true">
-          <span className="hero__scroll-line" />
-          <span className="hero__scroll-label">Scroll</span>
+        {/* Floating Cup */}
+        <div className="hero__cup-wrapper">
+          <img 
+            src="https://images.unsplash.com/photo-1559525839-b184a4d698c7?w=600&q=80" 
+            alt="Coffee cup" 
+            className="hero__cup"
+          />
         </div>
       </div>
-
-      {/* Bottom fade */}
-      <div className="hero__fade-bottom" aria-hidden="true" />
     </section>
   )
 }
