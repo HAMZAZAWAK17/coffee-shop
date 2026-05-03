@@ -4,6 +4,7 @@ interface MenuItem {
   name: string
   description: string
   price: string
+  image: string
 }
 
 interface MenuCategory {
@@ -17,33 +18,33 @@ const categories: MenuCategory[] = [
     icon: '☕',
     title: 'Classic Coffees',
     items: [
-      { name: 'Espresso Ristretto', description: 'Short, strong, and full-bodied classic espresso', price: '20 MAD' },
-      { name: 'Café Marocain', description: 'Traditional spiced coffee with cardamom, cinnamon & nutmeg', price: '32 MAD' },
-      { name: 'Latte au Safran', description: 'Velvety espresso latte infused with Taliouine saffron', price: '48 MAD' },
-      { name: 'Cappuccino', description: 'Rich espresso topped with deeply textured steamed milk', price: '30 MAD' },
-      { name: 'Pour Over V60', description: 'Single-origin Atlas blend, brewed fresh to order', price: '40 MAD' },
+      { name: 'Espresso Ristretto', description: 'Short, strong, and full-bodied classic espresso', price: '20 MAD', image: 'https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?w=150&h=150&fit=crop&q=80' },
+      { name: 'Café Marocain', description: 'Traditional spiced coffee with cardamom, cinnamon & nutmeg', price: '32 MAD', image: 'https://images.unsplash.com/photo-1553177595-4de2bbaf8de3?w=150&h=150&fit=crop&q=80' },
+      { name: 'Latte au Safran', description: 'Velvety espresso latte infused with Taliouine saffron', price: '48 MAD', image: 'https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=150&h=150&fit=crop&q=80' },
+      { name: 'Cappuccino', description: 'Rich espresso topped with deeply textured steamed milk', price: '30 MAD', image: 'https://images.unsplash.com/photo-1534778101976-62847782c213?w=150&h=150&fit=crop&q=80' },
+      { name: 'Pour Over V60', description: 'Single-origin Atlas blend, brewed fresh to order', price: '40 MAD', image: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=150&h=150&fit=crop&q=80' },
     ],
   },
   {
     icon: '🧊',
     title: 'Specialty & Iced Coffees',
     items: [
-      { name: 'Cold Brew Argan', description: 'Slow-steeped cold brew finished with a drop of Moroccan argan oil', price: '55 MAD' },
-      { name: 'Iced Latte', description: 'Chilled espresso over ice with milk and a touch of vanilla', price: '35 MAD' },
-      { name: 'Mocha Glacé', description: 'Iced coffee blended with dark chocolate and steamed milk', price: '45 MAD' },
-      { name: 'Nitro Cold Brew', description: 'Nitrogen-infused cold brew for a creamy, stout-like texture', price: '60 MAD' },
-      { name: 'Caramel Macchiato', description: 'Espresso layered with vanilla, steamed milk, and caramel drizzle', price: '42 MAD' },
+      { name: 'Cold Brew Argan', description: 'Slow-steeped cold brew finished with a drop of Moroccan argan oil', price: '55 MAD', image: 'https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?w=150&h=150&fit=crop&q=80' },
+      { name: 'Iced Latte', description: 'Chilled espresso over ice with milk and a touch of vanilla', price: '35 MAD', image: 'https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=150&h=150&fit=crop&q=80' },
+      { name: 'Mocha Glacé', description: 'Iced coffee blended with dark chocolate and steamed milk', price: '45 MAD', image: 'https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=150&h=150&fit=crop&q=80' },
+      { name: 'Nitro Cold Brew', description: 'Nitrogen-infused cold brew for a creamy, stout-like texture', price: '60 MAD', image: 'https://images.unsplash.com/photo-1499961024600-ad094db305cc?w=150&h=150&fit=crop&q=80' },
+      { name: 'Caramel Macchiato', description: 'Espresso layered with vanilla, steamed milk, and caramel drizzle', price: '42 MAD', image: 'https://images.unsplash.com/photo-1620589125156-fd5028c5e05b?w=150&h=150&fit=crop&q=80' },
     ],
   },
   {
     icon: '🍪',
     title: 'Cookies & Brownies',
     items: [
-      { name: 'Classic Chocolate Chip', description: 'Warm, gooey cookie loaded with rich dark chocolate chunks', price: '25 MAD' },
-      { name: 'Double Fudge Brownie', description: 'Decadent chocolate brownie with a fudgy center and crispy edge', price: '30 MAD' },
-      { name: 'Walnut Brownie', description: 'Our signature brownie studded with toasted Moroccan walnuts', price: '35 MAD' },
-      { name: 'White Chocolate Macadamia', description: 'Soft-baked cookie with white chocolate chips and macadamia nuts', price: '28 MAD' },
-      { name: 'Sea Salt Caramel Cookie', description: 'Chewy cookie infused with caramel and a sprinkle of sea salt', price: '28 MAD' },
+      { name: 'Classic Chocolate Chip', description: 'Warm, gooey cookie loaded with rich dark chocolate chunks', price: '25 MAD', image: 'https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=150&h=150&fit=crop&q=80' },
+      { name: 'Double Fudge Brownie', description: 'Decadent chocolate brownie with a fudgy center and crispy edge', price: '30 MAD', image: 'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=150&h=150&fit=crop&q=80' },
+      { name: 'Walnut Brownie', description: 'Our signature brownie studded with toasted Moroccan walnuts', price: '35 MAD', image: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?w=150&h=150&fit=crop&q=80' },
+      { name: 'White Chocolate Macadamia', description: 'Soft-baked cookie with white chocolate chips and macadamia nuts', price: '28 MAD', image: 'https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?w=150&h=150&fit=crop&q=80' },
+      { name: 'Sea Salt Caramel Cookie', description: 'Chewy cookie infused with caramel and a sprinkle of sea salt', price: '28 MAD', image: 'https://images.unsplash.com/photo-1618923850107-01b4c919d365?w=150&h=150&fit=crop&q=80' },
     ],
   },
 ]
@@ -74,14 +75,19 @@ export default function Menu() {
                 <div className="menu__category-rule" aria-hidden="true" />
               </div>
               <ul className="menu__items" role="list">
-                {items.map(({ name, description, price }) => (
+                {items.map(({ name, description, price, image }) => (
                   <li className="menu__item" key={name}>
-                    <div className="menu__item-top">
-                      <span className="menu__item-name">{name}</span>
-                      <span className="menu__item-dots" aria-hidden="true" />
-                      <span className="menu__item-price">{price}</span>
+                    <div className="menu__item-image-wrapper">
+                      <img src={image} alt={name} className="menu__item-image" loading="lazy" />
                     </div>
-                    <p className="menu__item-desc">{description}</p>
+                    <div className="menu__item-content">
+                      <div className="menu__item-top">
+                        <span className="menu__item-name">{name}</span>
+                        <span className="menu__item-dots" aria-hidden="true" />
+                        <span className="menu__item-price">{price}</span>
+                      </div>
+                      <p className="menu__item-desc">{description}</p>
+                    </div>
                   </li>
                 ))}
               </ul>
