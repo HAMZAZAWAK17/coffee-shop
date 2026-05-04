@@ -1,0 +1,137 @@
+.our-store {
+  padding: var(--section-py) 0;
+  background-color: var(--color-bg);
+}
+
+.store-container {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 4rem;
+  margin-top: 3rem;
+  align-items: center;
+}
+
+.map-wrapper {
+  background-color: var(--color-card-bg);
+  border-radius: var(--radius);
+  padding: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-height: 500px;
+}
+
+.morocco-map {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  filter: drop-shadow(0 20px 40px rgba(0,0,0,0.05));
+}
+
+.map-path {
+  fill: var(--color-white);
+  stroke: var(--color-primary);
+  stroke-width: 2;
+  transition: var(--transition);
+}
+
+.store-marker {
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.marker-dot {
+  fill: var(--color-primary);
+}
+
+.marker-ring {
+  fill: none;
+  stroke: var(--color-primary);
+  stroke-width: 2;
+  opacity: 0.3;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.5; }
+  100% { transform: scale(2); opacity: 0; }
+}
+
+.marker-label {
+  background: var(--color-white);
+  padding: 5px 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.marker-label strong {
+  font-size: 0.85rem;
+  color: var(--color-text-dark);
+}
+
+.marker-label span {
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+}
+
+.store-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.store-item {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background-color: var(--color-white);
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.store-item:hover {
+  transform: translateX(10px);
+  border-color: var(--color-primary);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.store-item__icon {
+  font-size: 1.5rem;
+}
+
+.store-item__info h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.store-item__info p {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 1024px) {
+  .store-container {
+    grid-template-columns: 1fr;
+  }
+  .store-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .store-list {
+    grid-template-columns: 1fr;
+  }
+  .map-wrapper {
+    padding: 2rem;
+  }
+}
