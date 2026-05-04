@@ -2,34 +2,38 @@ import './Hero.css'
 
 export default function Hero() {
   return (
-    <section className="hero angle-bottom" id="home">
-      {/* Background image */}
-      <div className="hero__bg">
-        <img
-          src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1920&q=80"
-          alt="Barista pouring milk into coffee"
-          className="hero__bg-img"
-        />
+    <section className="hero" id="home">
+      <div className="hero__bg-container">
         <div className="hero__overlay" />
-      </div>
-
-      <div className="hero__content container">
-        <h1 className="hero__title">
-          Brewed to Perfection,
-        </h1>
-        <p className="hero__subtitle-text">
-          RICH FLAVORS & DAILY CRAFT
-        </p>
-
-        {/* Floating Cup */}
-        <div className="hero__cup-wrapper">
-          <img 
-            src="https://images.unsplash.com/photo-1559525839-b184a4d698c7?w=600&q=80" 
-            alt="Coffee cup" 
-            className="hero__cup"
-          />
+        <div className="hero__content container reveal">
+          <h1 className="hero__title serif">
+            Crafted Coffee.<br />Brewed with Soul.
+          </h1>
+          <p className="hero__subtitle">
+            Ethically sourced beans, slow-roasted perfection,<br />
+            delivered fresh to your door.
+          </p>
+          <div className="hero__actions">
+            <button className="btn btn-primary">Shop Coffee</button>
+            <button className="btn btn-outline glass" style={{ color: 'white', borderColor: 'white' }}>Visit Our Café</button>
+          </div>
         </div>
+        
+        {/* Pagination Dots */}
+        <div className="hero__dots">
+          <span className="dot active"></span>
+          <span className="dot"></span>
+          <span className="dot"></span>
+        </div>
+      </div>
+      
+      {/* Decorative Curved Bottom */}
+      <div className="hero__curve">
+        <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0C240 80 480 120 720 120C960 120 1200 80 1440 0V120H0V0Z" fill="var(--color-bg)"/>
+        </svg>
       </div>
     </section>
   )
 }
+
